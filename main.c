@@ -1,4 +1,4 @@
-*/
+/*
   파일이름: main.c
   작 성 자: 장대한
   하 는 일: 이용자의 정보를 받은 후 BMI 계산과 예상 기초대사량(BMR) 계산
@@ -13,7 +13,7 @@ int main() {
   char gender; //성별
   double height, weight, bmi, bmr; //처음부터 키, 몸무게, BMI, BMR
 
-  printf("--- 안녕하세요 BMI, BMR 계산기입니다. ---\n")
+  printf("--- 안녕하세요 BMI, BMR 계산기입니다. ---\n");
   printf("당신의 이름은 무엇입니까? : ");
   scanf("%s", &name);
   printf("당신의 성별은 무엇인가요?(M/W로 입력해주세요.) : ");

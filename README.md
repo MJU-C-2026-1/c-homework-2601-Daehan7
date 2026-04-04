@@ -54,7 +54,8 @@
      * **해결**: AI에게 질문하여 %s, %c 양 옆에 ""를 붙여야함을 확인받고 수정.
      
 ### **📁 증빙 자료:**
-  * [1차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
+  *  (첨부 후 링크)[screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-04-04-18_32_45.pdf](https://github.com/user-attachments/files/26479644/screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-04-04-18_32_45.pdf)
+
   * <img width="1537" height="544" alt="스크린샷 2026-04-02 211912" src="https://github.com/user-attachments/assets/9758c418-3e6a-441a-a9a1-65fbd063a148" />
 
 

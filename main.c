@@ -1,7 +1,7 @@
 /* 
-  파일이름: 
-  작 성 자:
-  하 는 일: 
+  파일이름: main.c
+  작 성 자:장대한
+  하 는 일: Hello World!
 */
 #include <stdio.h>
 int main()

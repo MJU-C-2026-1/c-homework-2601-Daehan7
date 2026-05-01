@@ -84,7 +84,8 @@
      * **해결:** AI에게 질문하고 &name에서 &가 추후 프로그램 실행에 문제를 일으킬 수 있음을 확인하고 제거함.
      
 ### **📁 증빙 자료:**
-  * [screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-05-01-20_44_46-5-9.pdf](https://github.com/user-attachments/files/27275016/screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-05-01-20_44_46-5-9.pdf)
+  *처음에 코드로 남지인지 여자인지 ... 부분부터
+    [screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-05-01-20_44_46-5-9.pdf](https://github.com/user-attachments/files/27275016/screencapture-gemini-google-u-1-app-8d1c08a6028347d4-2026-05-01-20_44_46-5-9.pdf)
     
   * 남성으로 계산시<img width="1059" height="549" alt="image" src="https://github.com/user-attachments/assets/4fd973ae-b5e3-443b-bd52-58a6f582705d" />
 

@@ -6,12 +6,18 @@
 
 #include <stdio.h>
 
+double bmicalculate(double weight, double height_m)
+{
+    return weight / (height_m * height_m);
+}
+
 int main() {
 
   char name[20]; //이용자의 이름
   int age; //나이
   char gender; //성별
   double height, weight, bmi, bmr; //처음부터 키, 몸무게, BMI, BMR
+  int choice;
 
   printf("--- 안녕하세요 BMI, BMR 계산기입니다. ---\n");
   printf("당신의 이름은 무엇입니까? : ");
@@ -20,6 +26,20 @@ int main() {
   scanf(" %c", &gender);
   printf("나이, 키(cm), 몸무게(kg)를 순서대로 입력해주세요. : ");
   scanf("%d %lf %lf", &age, &height, &weight);
+
+  printf("무엇을 하고 싶으신가요? :\n");
+  printf("1. BMI 계산\t2. BMR(기초대사량) 계산\t3. 종료)");
+  scanf("%d", &choice);
+
+  switch(choice)
+  {
+    case 1:
+      printf("BMI 계산을 선택하였습니다.");
+      bmicalculate() = bmi;
+    
+    
+  }
+  
 
   if( age <= 0 || height <= 0 || weight <= 0) //나이, 키, 몸무게에 비정상적인 수치가 작성됐는지 감지
   {

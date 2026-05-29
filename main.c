@@ -6,9 +6,11 @@
 
 #include <stdio.h>
 
-double bmicalculate(double weight, double height_m)
+double bmicalculate(double weight, double height)
 {
-    return weight / (height_m * height_m);
+  double height_m;
+  height_m = height / 100.0;
+  return weight / (height_m * height_m);
 }
 
 double bmrcalculate(double weight,double height,int age)
@@ -24,7 +26,7 @@ void printfinal(char name[], char gender, int age)
 
 void printbmi(double bmi)
 {
-  printf("현재 BMI 지수: %.2f\n, bmi");
+  printf("현재 BMI 지수: %.2f\n", bmi);
 }
 
 double genderbmr(char gender, double bmr)
@@ -68,11 +70,8 @@ int main() {
   scanf("%d %lf %lf", &age, &height, &weight);
 
   printf("무엇을 하고 싶으신가요? :\n");
-  printf("1. BMI 계산\t2. BMR(기초대사량) 계산\t3. BMI,BMR(기초대사량) 동시 계산\t 4.종료)");
+  printf("1. BMI 계산\t2. BMR(기초대사량) 계산\t 3. BMI,BMR(기초대사량) 동시 계산\t 4.종료\n");
   scanf("%d", &choice);
-
-  double height_m;
-  height_m = height / 100.0;
 
   if(age <= 0 || height <= 0 || weight <= 0)
   {
@@ -85,12 +84,12 @@ int main() {
   {
     case 1:
       printf("BMI 계산을 선택하였습니다.");
-      bmi = bmicalculate(weight, height_m);
+      bmi = bmicalculate(weight, height);
       printfinal(name, gender, age);
       printbmi(bmi);
       if(bmi >= 25.0)
       {
-        printf("\n 표준 BMI지수보다 수치가 높습니다. 약간의 운동을 추천합니다. \n");
+        printf("\n표준 BMI지수보다 수치가 높습니다. 약간의 운동을 추천합니다. \n\n");
       }
       break;
     
@@ -104,14 +103,14 @@ int main() {
 
     case 3:
       printf("BMI, BMR(기초대사량) 동시 계산을 선택하셨습니다.");
-      bmi = bmicalculate(weight, height_m);
+      bmi = bmicalculate(weight, height);
       bmr = bmrcalculate(weight, height, age);
       bmr = genderbmr(gender, bmr);
       printfinal(name, gender, age);
       printbmi(bmi);
       if(bmi >= 25.0)
       {
-        printf("\n 표준 BMI지수보다 수치가 높습니다. 약간의 운동을 추천합니다. \n");
+        printf("\n표준 BMI지수보다 수치가 높습니다. 약간의 운동을 추천합니다. \n\n");
       }
       printbmr(bmr);
       break;

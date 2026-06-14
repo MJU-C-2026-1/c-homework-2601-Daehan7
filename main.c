@@ -70,6 +70,7 @@ int main() {
 
   printf("무엇을 하고 싶으신가요? :\n");
   printf("1. BMI 계산\t2. BMR(기초대사량) 계산\t 3. BMI,BMR(기초대사량) 동시 계산\t 4.종료\n");
+  printf("선택 :");
   scanf("%d", &choice);
 
   if(age <= 0 || height <= 0 || weight <= 0)
@@ -95,7 +96,7 @@ int main() {
     case 2:
       printf("BMR(기초대사량) 계산을 선택하였습니다.");
       bmr = bmrcalculate(weight, height, age);
-      bmr = genderbmr(gender, &bmr);
+      genderbmr(gender, &bmr);
       printfinal(name, gender, age);
       printbmr(bmr);
       break;
@@ -104,7 +105,7 @@ int main() {
       printf("BMI, BMR(기초대사량) 동시 계산을 선택하셨습니다.");
       bmi = bmicalculate(weight, height);
       bmr = bmrcalculate(weight, height, age);
-      bmr = genderbmr(gender, &bmr);
+      genderbmr(gender, &bmr);
       printfinal(name, gender, age);
       printbmi(bmi);
       if(bmi >= 25.0)

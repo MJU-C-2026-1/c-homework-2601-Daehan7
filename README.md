@@ -116,7 +116,9 @@
       * **해결:** bmi = bmicalculate()로 작성해야하나 bmicalculate() = bmi로 작성하는 실수를 발견했습니다.
      
 ### **📁 증빙 자료:**
-  * 
+  * [3차 제미나이 장대한.pdf](https://github.com/user-attachments/files/28388088/3.pdf)
+
+
   * ![alt text](image.png)
 <br>
 

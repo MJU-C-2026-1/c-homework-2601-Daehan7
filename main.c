@@ -29,23 +29,22 @@ void printbmi(double bmi)
   printf("현재 BMI 지수: %.2f\n", bmi);
 }
 
-double genderbmr(char gender, double bmr)
+void genderbmr(char gender, double *bmr)
 {
-  if(gender == 'M')
+  if(gender == 'M' || gender =='m')
   {
-    bmr = bmr + 5;
+    *bmr = *bmr + 5;
   }
-  else if(gender =='W')
+  else if(gender =='W' || gender == 'w')
   {
-    bmr = bmr - 161;
+    *bmr = *bmr - 161;
   }
   else
   {
     printf("잘못된 성별을 입력하셨습니다. BMR 값을 0으로 처리합니다.");
-    bmr = 0;
+    *bmr = 0;
   }
 
-  return bmr;
 }
 
 void printbmr(double bmr)
@@ -96,7 +95,7 @@ int main() {
     case 2:
       printf("BMR(기초대사량) 계산을 선택하였습니다.");
       bmr = bmrcalculate(weight, height, age);
-      bmr = genderbmr(gender, bmr);
+      bmr = genderbmr(gender, &bmr);
       printfinal(name, gender, age);
       printbmr(bmr);
       break;
@@ -105,7 +104,7 @@ int main() {
       printf("BMI, BMR(기초대사량) 동시 계산을 선택하셨습니다.");
       bmi = bmicalculate(weight, height);
       bmr = bmrcalculate(weight, height, age);
-      bmr = genderbmr(gender, bmr);
+      bmr = genderbmr(gender, &bmr);
       printfinal(name, gender, age);
       printbmi(bmi);
       if(bmi >= 25.0)

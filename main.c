@@ -6,51 +6,17 @@
 
 #include <stdio.h>
 
-double bmicalculate(double weight, double height)
-{
-  double height_m;
-  height_m = height / 100.0;
-  return weight / (height_m * height_m);
-}
+double bmicalculate(double weight, double height);
 
-double bmrcalculate(double weight,double height,int age)
-{
-  return 10 * weight + 6.25 * height - 5 * age;
-}
+double bmrcalculate(double weight,double height,int age);
 
-void printfinal(char name[], char gender, int age)
-{
-  printf("\n--- %s님의 분석 결과입니다. ---\n\n", name);
-  printf("성별: %c / 나이: %d\n", gender, age);
-}
+void printfinal(char name[], char gender, int age);
 
-void printbmi(double bmi)
-{
-  printf("현재 BMI 지수: %.2f\n", bmi);
-}
+void printbmi(double bmi);
 
-void genderbmr(char gender, double *bmr)
-{
-  if(gender == 'M' || gender =='m')
-  {
-    *bmr = *bmr + 5;
-  }
-  else if(gender =='W' || gender == 'w')
-  {
-    *bmr = *bmr - 161;
-  }
-  else
-  {
-    printf("잘못된 성별을 입력하셨습니다. BMR 값을 0으로 처리합니다.");
-    *bmr = 0;
-  }
+void genderbmr(char gender, double *bmr);
 
-}
-
-void printbmr(double bmr)
-{
-  printf("현재 예상 BMR(기초대사량) 지수: %.2fkcal\n", bmr);
-}
+void printbmr(double bmr);
 
 int main() {
 
@@ -130,4 +96,50 @@ int main() {
   }
 
   return 0;
+}
+
+double bmicalculate(double weight, double height)
+{
+  double height_m;
+  height_m = height / 100.0;
+
+  return weight / (height_m * height_m);
+}
+
+double bmrcalculate(double weight, double height, int age)
+{
+  return 10 * weight + 6.25 * height - 5 * age;
+}
+
+void printfinal(char name[], char gender, int age)
+{
+  printf("\n--- %s님의 분석 결과입니다. ---\n\n", name);
+  printf("성별: %c / 나이: %d\n", gender, age);
+}
+
+void printbmi(double bmi)
+{
+  printf("현재 BMI 지수: %.2f\n", bmi);
+}
+
+void genderbmr(char gender, double *bmr)
+{
+  if(gender == 'M' || gender == 'm')
+  {
+    *bmr = *bmr + 5;
+  }
+  else if(gender == 'W' || gender == 'w')
+  {
+    *bmr = *bmr - 161;
+  }
+  else
+  {
+    printf("잘못된 성별을 입력하셨습니다. BMR 값은 0으로 처리됩니다.");
+    *bmr = 0;
+  }
+}
+
+void printbmr(double bmr)
+{
+  printf("현재 예상 BMR(기초대사량) 지수: %.2fkcal\n", bmr);
 }
